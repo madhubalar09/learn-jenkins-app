@@ -27,8 +27,9 @@ pipeline {
                 }
            }
             steps {
-               sh '''
-               ls -ltr /build/index.html
+               sh ''' 
+               pwd
+               ls /learn-jenkins-app/build/index.html
                npm test
                '''
             }
