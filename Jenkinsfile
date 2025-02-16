@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment{
-            path = sh 'pwd'
-    }
-
     stages {
         stage('build') {
             agent {
