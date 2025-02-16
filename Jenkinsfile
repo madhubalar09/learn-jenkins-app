@@ -19,6 +19,9 @@ pipeline {
                '''
             }
         }
+        environment{
+            path = 'sh 'pwd''
+        }
         stage ('test'){
            agent {
                 docker {
@@ -29,7 +32,7 @@ pipeline {
             steps {
                sh ''' 
                pwd
-               ls /learn-jenkins-app/build/index.html
+               ls $path/build/index.html
                npm test
                '''
             }
