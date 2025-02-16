@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment{
+            path = 'sh 'pwd''
+    }
+
     stages {
         stage('build') {
             agent {
@@ -19,9 +23,7 @@ pipeline {
                '''
             }
         }
-        environment{
-            path = 'sh 'pwd''
-        }
+
         stage ('test'){
            agent {
                 docker {
