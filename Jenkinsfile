@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-            path = 'sh 'pwd''
+            path = sh 'pwd'
     }
 
     stages {
